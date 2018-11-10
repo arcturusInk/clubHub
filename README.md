@@ -33,3 +33,18 @@ People can sign up for events, can post comments about events, and can post comm
 - Error message if the previous action was not successful,
 - Some mechanism for the user to choose the use case she wants to execute.  You may choose to provide links to other URLS that will present the interfaces for other use cases, or you may include those interfaces directly on the home page. 
 - Any other information you’d like to include.  For example, you might want to include clubs the user belongs to, events she’s signed up for, etc on the home page, or you may prefer to just show them when she does some of the following use cases.
+
+After logging in successfully a user may do any of the following use cases:
+
+4. View My Events:  Provide various ways for the user to see upcoming events of interest.  These can be included as a single use case or as separate use cases.  The default should be showing events for the current day and the next three days.  Optionally you may include a way for the user to specify a range of dates.  In each case, the display should include the ename, date, time, location, and name of sponsoring club.
+- upcoming events for which this user has signed up
+- upcoming events that are public or are sponsored by clubs to which this user belongs
+
+5. Sign up for an event: User chooses an event that they are eligible for (because they belong to the sponsoring club or because it’s public) and signs up for the event.  You may find it easier to implement this along with the view event use case.  If the user has previously signed up for the event no additional action is needed (but ClubHub should not crash)
+
+6. Post a new event: User enters ename, date, time, description, location, sponsoring club, and indication of whether event is public.
+ClubHub records the event with a new eid and notes the sponsoring club. The user must be a member of the club with role “admin” to post an event! If not, ClubHub displays a meaningful error message.
+
+7. Check club’s events : For  each  club  for  which  the  user  has  ”admin”  role, ClubHub displays upcoming events (eid, ename, sponsoring clubs) and the number of people who have have signed up for each. Use an outer join to include events for which no one has signed up.
+
+8. Logout: The session is destroyed and a “goodbye” page or the login page is displayed.
