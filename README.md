@@ -1,4 +1,4 @@
-# clubHub
+# clubHub (Screenshots Below)
 A web app for student-related information on after school clubs
 
 ### Project Overview
