@@ -28,6 +28,7 @@ People can sign up for events, can post comments about events, and can post comm
 2. Login: User enters pid, x and password y via forms on login page.  This data is sent as POST parameters to the login-authentication component, which checks whether there is a tuple in the Person table with pid = x and the passwd = md5(y)
 - If so, login is successful.  A session is initiated with pid stored as a session variables.  Option-ally, store other session variables.  Control is redirected to a component that displays the user’s home page.
 - If not, login is unsuccessful.  A message is displayed indicating this to the user.
+![1&2](https://user-images.githubusercontent.com/9923181/48306676-b4c45700-e50a-11e8-92c7-64d195e88574.JPG)
 
 3. Display Home Page: Once a user has logged in, ClubHub will display her home page.  Also, after other actions or sequences of related actions, are executed, control will return to component that displays the home page.  The home page should display
 - Error message if the previous action was not successful,
@@ -41,9 +42,11 @@ After logging in successfully a user may do any of the following use cases:
 - upcoming events that are public or are sponsored by clubs to which this user belongs
 
 5. Sign up for an event: User chooses an event that they are eligible for (because they belong to the sponsoring club or because it’s public) and signs up for the event.  You may find it easier to implement this along with the view event use case.  If the user has previously signed up for the event no additional action is needed (but ClubHub should not crash)
+![5](https://user-images.githubusercontent.com/9923181/48306686-ea694000-e50a-11e8-95c9-ed1f9331fdae.JPG)
 
 6. Post a new event: User enters ename, date, time, description, location, sponsoring club, and indication of whether event is public.
 ClubHub records the event with a new eid and notes the sponsoring club. The user must be a member of the club with role “admin” to post an event! If not, ClubHub displays a meaningful error message.
+![6](https://user-images.githubusercontent.com/9923181/48306681-cefe3500-e50a-11e8-869d-2eb870080153.JPG)
 
 7. Check club’s events : For  each  club  for  which  the  user  has  ”admin”  role, ClubHub displays upcoming events (eid, ename, sponsoring clubs) and the number of people who have have signed up for each. Use an outer join to include events for which no one has signed up.
 
