@@ -26,4 +26,10 @@ People can sign up for events, can post comments about events, and can post comm
 - see list of public events occurring in the coming day
 
 2. Login: User enters pid, x and password y via forms on login page.  This data is sent as POST parameters to the login-authentication component, which checks whether there is a tuple in the Person table with pid = x and the passwd = md5(y)
-- If so, login is successful.  A session is initiated with pid stored as a session variables.  Option-ally, you can store other session variables.  Control is redirected to a component that displays the user’s home page.
+- If so, login is successful.  A session is initiated with pid stored as a session variables.  Option-ally, store other session variables.  Control is redirected to a component that displays the user’s home page.
+- If not, login is unsuccessful.  A message is displayed indicating this to the user.
+
+3. Display Home Page: Once a user has logged in, ClubHub will display her home page.  Also, after other actions or sequences of related actions, are executed, control will return to component that displays the home page.  The home page should display
+- Error message if the previous action was not successful,
+- Some mechanism for the user to choose the use case she wants to execute.  You may choose to provide links to other URLS that will present the interfaces for other use cases, or you may include those interfaces directly on the home page. 
+- Any other information you’d like to include.  For example, you might want to include clubs the user belongs to, events she’s signed up for, etc on the home page, or you may prefer to just show them when she does some of the following use cases.
