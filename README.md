@@ -40,6 +40,7 @@ After logging in successfully a user may do any of the following use cases:
 4. View My Events:  Provide various ways for the user to see upcoming events of interest.  These can be included as a single use case or as separate use cases.  The default should be showing events for the current day and the next three days.  Optionally you may include a way for the user to specify a range of dates.  In each case, the display should include the ename, date, time, location, and name of sponsoring club.
 - upcoming events for which this user has signed up
 - upcoming events that are public or are sponsored by clubs to which this user belongs
+![4](https://user-images.githubusercontent.com/9923181/48306683-e3423200-e50a-11e8-8e60-6cc077268895.JPG)
 
 5. Sign up for an event: User chooses an event that they are eligible for (because they belong to the sponsoring club or because it’s public) and signs up for the event.  You may find it easier to implement this along with the view event use case.  If the user has previously signed up for the event no additional action is needed (but ClubHub should not crash)
 ![5](https://user-images.githubusercontent.com/9923181/48306686-ea694000-e50a-11e8-95c9-ed1f9331fdae.JPG)
