@@ -43,6 +43,7 @@ After logging in successfully a user may do any of the following use cases:
 ![4](https://user-images.githubusercontent.com/9923181/48306683-e3423200-e50a-11e8-8e60-6cc077268895.JPG)
 
 5. Sign up for an event: User chooses an event that they are eligible for (because they belong to the sponsoring club or because it’s public) and signs up for the event. If the user has previously signed up for the event no additional action is needed (but ClubHub should not crash)
+
 ![5](https://user-images.githubusercontent.com/9923181/48306686-ea694000-e50a-11e8-95c9-ed1f9331fdae.JPG)
 
 6. Post a new event: User enters ename, date, time, description, location, sponsoring club, and indication of whether event is public.
