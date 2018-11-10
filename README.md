@@ -18,3 +18,12 @@ Students can belong to clubs.  A student may have some special role(s) within a 
 Clubs can sponsor events.  Each event has a unique ID, a name (ename), a description, a date, a time, and a location, and an indication of whether it is public or just for club members.
 
 People can sign up for events, can post comments about events, and can post comments about clubs. In  some  cases  the  system  may restrict  sign-ups  and/or  comments  to  club  members. People  making comments can designate those comments as being public or just for club members.
+
+### The Features ClubHub Supports
+1. View Public Info: All users, whether logged in or not, can
+- view list of topics
+- select a topic and see list of clubs (cname, desc) that are about that topic
+- see list of public events occurring in the coming day
+
+2. Login: User enters pid, x and password y via forms on login page.  This data is sent as POST parameters to the login-authentication component, which checks whether there is a tuple in the Person table with pid = x and the passwd = md5(y)
+- If so, login is successful.  A session is initiated with pid stored as a session variables.  Option-ally, you can store other session variables.  Control is redirected to a component that displays the user’s home page.
